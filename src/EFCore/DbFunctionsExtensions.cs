@@ -77,4 +77,17 @@ public static class DbFunctionsExtensions
     /// <returns>A random double number between 0 and 1, exclusive.</returns>
     public static double Random(this DbFunctions _)
         => throw new InvalidOperationException(CoreStrings.FunctionOnClient(nameof(Random)));
+
+    /// <summary>
+    /// TODO
+    /// </summary>
+    /// <param name="_">The <see cref="DbFunctions" /> instance.</param>
+    /// <param name="json">A JSON column or value.</param>
+    /// <param name="jsonPath">A JSON path to search within <paramref name="json"/></param>
+    /// <returns><see langword="true" /> if JSON path exist in a JSON object.</returns>
+    public static bool JsonPathExists(
+        this DbFunctions _,
+        object json,
+        string jsonPath)
+        => throw new InvalidOperationException(CoreStrings.FunctionOnClient(nameof(JsonPathExists)));
 }
